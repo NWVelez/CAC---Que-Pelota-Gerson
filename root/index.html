@@ -222,58 +222,68 @@
           CONTACTO
         </h1>
 
-        <form>
+        <form id="contacto">
           <p>
             <input
-              type="text"
+              type="nombre"
               name="nombre"
               placeholder="Nombre"
               size="40"
-              required
-            />
+              maxlength="8"
+              span role="alert" id="nombreError" aria-hidden="true">
+
             <input
-              type="text"
+              type="apellido"
               name="apellido"
               placeholder="Apellido"
               size="40"
-              required
-            />
+              maxlength="8"
+              span role="alert" id="apellidoError" aria-hidden="true">
+
           </p>
 
           <p>
             <input
-              type="text"
-              name="Email"
+              type="email"
+              name="email"
               placeholder="Email"
               size="40"
-              required
-            />
-            <input
-              type="text"
+              required maxlength="20"
+              span role="alert" id="emailError" aria-hidden="true">
+
+              <input
+              type="telefono"
               name="telefono"
               placeholder="Telefono"
               size="40"
-              required
-            />
+              min="10"
+              span role="alert" id="telefonoError" aria-hidden="true">
+
           </p>
 
           <p>
             <input
-              type="text"
-              name="texto"
+              type="asunto"
+              name="asunto"
               placeholder="Asunto"
               size="40"
-              required
-            />
+              required maxlength="30"
+              required minlength="10"
+              span role="alert" id="asuntoError" aria-hidden="true">
+
           </p>
 
           <p>
             <textarea
-              name="Mensaje"
+              type="text"
+              name="mensaje"
               rows="4"
               cols="40"
-              placeholder="Su Mensaje"
-            ></textarea>
+              placeholder="Su Mensaje es..."
+              maxlength="50"
+              span role="alert" id="mensajerror" aria-hidden="true">
+
+            </textarea>
           </p>
           <p>
             <input type="submit" value="Enviar" />

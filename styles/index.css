@@ -185,3 +185,32 @@ display: flex;
     transition: all ease-in-out;
     transform:translate(-50%,-50%) scale(1);
 }
+
+.contacto
+  
+  p > label {
+    display: block;
+  }
+  
+  input:required[type="nombre" ],
+  input:required[type="apellido"],
+  input:required[type="email"],
+  input:required[type="telefono"],
+  input:required[type="asunto"],
+  input:required[type="text"],
+
+  textarea,
+  fieldset {
+    border: 1px solid #08da2b; background-color: #85a07a;
+    box-sizing: border-box;
+  }
+  
+  input:invalid {
+    box-shadow: 0 0 5px 1px red; background-color: rgb(250, 195, 195);
+
+  }
+  
+  input:focus:invalid {
+    box-shadow: none;
+  }
+  
